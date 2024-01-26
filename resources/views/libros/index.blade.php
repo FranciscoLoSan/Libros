@@ -9,7 +9,7 @@
                 <th scope="col">Editorial</th>
                 <th scope="col">Edición</th>
                 <th scope="col">ISBN</th>
-                <th scope="col">Actions</th>
+                <th scope="col">Acciones</th>
                 <th scope="col"><a href="{{ url('/libros/create') }}" class="btn btn-success">Agregar</a></th>
             </tr>
         </thead>
@@ -26,12 +26,12 @@
                     <td>{{ $libro->ISBN }}</td>
                     <td>
 
-                        <a class="btn btn-primary float-left" href="{{ url('libros', [$libro->id]) }}"> Show </a>
-                        <a class="btn btn-warning float-left ml-1" href="{{ url('libros', [$libro->id, 'edit']) }}"> Edit </a>
+                        <a class="btn btn-primary float-left" href="{{ url('libros', [$libro->id]) }}"> Ver </a>
+                        <a class="btn btn-warning float-left ml-1" href="{{ url('libros', [$libro->id, 'edit']) }}"> Editar </a>
 
                         <form class="btn float-left" action="{{ url('libros/destroy/' . $libro->id) }}" method="POST">
                             @csrf
-                            <button class="btn btn-danger"> Delete </button>
+                            <button class="btn btn-danger"> Eliminar </button>
                         </form>
                     </td>
                     <td></td>
