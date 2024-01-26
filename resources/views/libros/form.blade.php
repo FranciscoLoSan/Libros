@@ -5,7 +5,11 @@
     <!-- Content here -->
     <div class="card text-center m-4">
         <div class="card-header">
-            Nuevo Libro
+            @if (isset($libro))
+                Editar Libro
+            @else
+                Nuevo Libro
+            @endif  
         </div>
         <form action="{{ isset($libro) ?  url('/libros/update/'.$libro->id.'') : url('libros/store')}}" method="POST" role="form" >
             @if (isset($libro))
@@ -29,7 +33,7 @@
                 <label for="ISBN" class="form-label">ISBN</label>
                 <input type="text" class="form-control" id="ISBN" name="ISBN" @if(isset($libro)) value="{{$libro->ISBN}}" @endif>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
         <div class="card-footer text-muted m-2">
         </div>

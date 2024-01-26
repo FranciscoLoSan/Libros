@@ -25,7 +25,7 @@
                     <form class="d-flex" action="{{ url('/libros/search') }}" method="POST">
                         @csrf
                         <input class="form-control me-2" type="search" placeholder="Titulo" aria-label="Search" name="search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
                     </form>
                 </div>
             </div>
